@@ -1,3 +1,6 @@
+// Rashil Gandhi
+// 18CS30036
+
 #include<stdint.h>
 
 const static uint32_t MAGIC = 12345;

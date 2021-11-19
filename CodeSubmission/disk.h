@@ -1,3 +1,6 @@
+// Rashil Gandhi
+// 18CS30036
+
 #include<stdint.h>
 
 const static int BLOCKSIZE = 4*1024;
