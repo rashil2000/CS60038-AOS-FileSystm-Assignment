@@ -3,6 +3,8 @@
 
 #include<stdint.h>
 
+#define MAX_LEN 240
+
 const static uint32_t MAGIC = 12345;
 
 
@@ -28,6 +30,18 @@ typedef struct super_block {
 	uint32_t data_blocks;  // Number of blocks reserved as data blocks
 } super_block;
 
+typedef struct file {
+	uint32_t valid;
+	uint32_t type;
+	char     name[MAX_LEN];
+	uint32_t length;
+	int      inumber;
+} file;
+
+typedef union dir_union {
+    file* dir;
+    int   off;
+} dir_union;
 
 int format(disk *diskptr);
 
